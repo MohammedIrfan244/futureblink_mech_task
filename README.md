@@ -5,7 +5,7 @@ Hey there! This is my submission for the Shopify App Developer task. I built thi
 The app allows merchants to type an announcement in their Shopify Admin dashboard, which is then saved to a MongoDB database for auditing and synced to the storefront using Shopify Metafields and a Theme App Extension.
 
 ## 🔗 Live Demo
-- **Deployed URL:** `https://your-vercel-app-url.vercel.app` *(Note: Update this link once deployed)*
+- **Deployed URL:** `https://futureblink-zem-task.vercel.app` 
 - **Loom Video Demo:** [Link to your video here]
 
 ## 🛠 What I Used
