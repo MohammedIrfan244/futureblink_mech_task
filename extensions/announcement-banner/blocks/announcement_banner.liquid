@@ -1,0 +1,49 @@
+{% assign announcement = shop.metafields.my_app.announcement %}
+
+{% if announcement and announcement != blank %}
+  <style>
+    .custom-announcement-banner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: {{ block.settings.bg_color }};
+      color: {{ block.settings.text_color }};
+      text-align: center;
+      padding: 12px;
+      z-index: 999999;
+      font-weight: bold;
+      font-family: inherit;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    /* Add padding to body so banner doesn't cover top content */
+    body {
+      padding-top: 48px;
+    }
+  </style>
+
+  <div class="custom-announcement-banner">
+    {{ announcement }}
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Announcement Banner",
+  "target": "body",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    }
+  ]
+}
+{% endschema %}
