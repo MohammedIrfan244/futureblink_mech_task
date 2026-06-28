@@ -41,15 +41,15 @@ export const action = async ({ request }: ActionFunctionArgs) => {
     return { success: false, error: "Text is required" };
   }
 
-  // 1. Save to Database
+  // save to Database
   await connectToDatabase();
   await Announcement.create({
     shop: session.shop,
     text: text,
   });
 
-  // 2. Sync to Shopify Metafield
-  // First get the Shop ID
+  // sync to Shopify Metafield
+  // first get the Shop ID
   const shopResponse = await admin.graphql(`
     #graphql
     query {
@@ -61,7 +61,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
   const shopJson = await shopResponse.json();
   const shopId = shopJson.data.shop.id;
 
-  // Now set the metafield
+  // now set the metafield
   const metafieldResponse = await admin.graphql(
     `#graphql
     mutation MetafieldsSet($metafields: [MetafieldsSetInput!]!) {
