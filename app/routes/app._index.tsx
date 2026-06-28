@@ -135,7 +135,7 @@ export default function Index() {
               </Text>
               <Text as="p">
                 Enter the text you want to display on the floating banner across your storefront.
-                When you click save, it will be recorded in our database for audit purposes and synced to your shop's metafields.
+                When you click save, it will be recorded in our database for audit purposes and synced to your shop&apos;s metafields.
               </Text>
               <FormLayout>
                 <TextField
