@@ -18,16 +18,33 @@ The app allows merchants to type an announcement in their Shopify Admin dashboar
 
 If you want to run this code on your own machine:
 
-1. Clone this repository and open it in your terminal.
-2. Run `npm install` to get all the packages.
-3. Create a `.env` file in the root folder and add a MongoDB connection string:
+1. **Clone and Install:**
+   Clone this repository and open it in your terminal. Run the following command to download all dependencies:
+   ```bash
+   npm install
+   ```
+
+2. **Database Setup:**
+   Create a `.env` file in the root folder of the project. Add your MongoDB connection string to it like this:
    ```env
    MONGODB_URI=your_mongodb_connection_string_here
    ```
-4. Run `npm run dev`.
-5. Follow the CLI prompt to install the app on your Shopify Development store.
-6. Once inside the app, type a message and click Save. 
-7. To see it on the storefront, go to your Theme Editor, click the "App embeds" icon on the left, and turn on the "Announcement Banner".
+
+3. **Start the Development Server:**
+   Run the following command to start the Shopify CLI:
+   ```bash
+   npm run dev
+   ```
+   *Note: If prompted, press `Y` to create a new app in your Shopify Partner account, or select an existing one.*
+
+4. **Install on your Store:**
+   The terminal will generate a preview URL or prompt you to press `p`. Open that link in your browser to install the app on your Shopify Development store.
+
+5. **Test the Dashboard:**
+   Once inside the app dashboard, type a message and click **Save**. You should see a success toast!
+
+6. **View on Storefront:**
+   To see it on the live storefront, go to **Online Store > Themes > Customize**. Click the **App embeds** icon on the left sidebar, and turn on the **Announcement Banner**. Hit Save and preview your store!
 
 ## 📦 Deployment on Vercel
 
